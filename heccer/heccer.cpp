@@ -160,6 +160,14 @@ void Heccer::load_dialog(void)
 
 void Heccer::execute(void)
 {
+    //- get input V
+
+    double dVm = input(0);
+
+    int iSerialVm = 2;
+
+    HeccerAddressableSet(pheccer, iSerialVm, "Vm", dVm);
+
     //- do the heccer update
 
     dTime += dStep;
